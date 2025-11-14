@@ -1,0 +1,66 @@
+// 1. Função saudar
+function saudar(nome) {
+    return `Olá, ${nome}!`;
+}
+
+// 2. Função calcularMedia
+function calcularMedia(n1, n2, n3) {
+    return (n1 + n2 + n3) / 3;
+}
+
+// 3. Função com parâmetro padrão
+function apresentarProduto(nomeProduto, preco = 0) {
+    return `Produto: ${nomeProduto} | Preço: R$ ${preco}`;
+}
+
+// ---- Testando as funções ----
+
+// Teste da função saudar
+console.log(saudar("Gabriel"));
+
+// Teste da função calcularMedia
+console.log(calcularMedia(8, 7.5, 9));
+
+// Teste da função apresentarProduto
+console.log(apresentarProduto("Camisa", 49.90));
+console.log(apresentarProduto("Chinelo"));  // Preço padrão 0
+
+// Criando o objeto livro
+let livro = {
+    titulo: "Dom Casmurro",
+    autor: "Machado de Assis",
+    paginas: 256,
+    disponivel: true
+};
+
+console.log(livro.titulo);
+console.log(livro["autor"]);
+
+livro.editora = "Editora XYZ";
+
+livro.detalhes = function() {
+    return `O livro "${this.titulo}", de ${this.autor}, possui ${this.paginas} páginas e é publicado pela ${this.editora}.`;
+};
+
+console.log(livro.detalhes());
+
+let biblioteca = {
+    livros: [livro]
+};
+
+// Funções
+function saudar(nome) {
+    return `Olá, ${nome}!`;
+}
+
+function calcularMedia(a, b, c) {
+    return (a + b + c) / 3;
+}
+
+function apresentarProduto(nome, preco = 0) {
+    return `Produto: ${nome} | Preço: R$ ${preco}`;
+}
+
+console.log(saudar("Gabriel"));
+console.log(calcularMedia(9, 8, 10));
+console.log(apresentarProduto("Mouse", 59.90));
